@@ -711,9 +711,12 @@ body {
     text-decoration: none;
 }
 
-.footer .box-container .box a:hover {
-    color: white;
-}
+footer .box-container .box a:hover {
+    color: white; 
+    transform: translateX(10px); 
+    transition: 0.3s ease; 
+    cursor: pointer;
+
 
 .footer .box-container .box a i {
     padding-right: 0.8rem;

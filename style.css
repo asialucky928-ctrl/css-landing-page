@@ -131,20 +131,29 @@
     border-radius: 15px;
 }
 
-.home-image img {
-    width: 100%;
+ .home-image img {
+     width: 100%;
     max-width: 320px;
     height: 420px;
     object-fit: cover;
     border-radius: 15px;
-    transition: transform 0.5s ease;
     cursor: pointer;
-}
+} 
 
-.home-image img:hover {
-    transform: scale(1.2);
+ .phone-img:hover { 
+     animation: floatUpDown 1s ease-in-out infinite;  
+ } 
+@keyframes floatUpDown {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px); 
+    }
+    100% {
+        transform: translateY(0); 
+    }
 }
-
 
 .second-home {
    min-height: 100vh;
@@ -408,6 +417,25 @@
     font-size: 38px;
     margin-bottom: 15px;
 }
+.facts-content h2:hover{
+    color: rgb(235, 221, 65);
+    transition: 3s ease;
+    cursor: pointer;
+}
+.fa-cloud-arrow-down:hover{
+    color: rgb(62, 164, 168);
+    transition: 3s ease;
+}
+.fa-heart:hover{
+    color:red;
+    transition: 3s ease;
+}
+.fa-twitter:hover{
+    color:rgb(21, 157, 164);
+    transition: 3s ease;
+}
+
+
 
 .facts-content p {
     font-size: 14px;
@@ -421,21 +449,33 @@
     gap: 100px;
 }
 
+
 .fact-item {
     text-align: center;
     color: white;
+    cursor: pointer;
 }
-
 .fact-item i {
     font-size: 40px;
     margin-bottom: 10px;
 }
 
+
 .fact-item h3 {
     font-size: 65px;
     font-weight: normal;
     margin-bottom: 5px;
+    transition: 0.3s ease;
 }
+.fact-item h3:hover {
+    color:  rgb(176, 63, 176);
+
+}
+.fact-item h4:hover {
+    color:  rgb(176, 63, 176);
+
+}
+
 
 .fact-item h4 {
     font-size: 19px;

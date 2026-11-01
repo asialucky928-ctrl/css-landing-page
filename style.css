@@ -1,13 +1,17 @@
-
+/* ==========================================
+   GLOBAL STYLES & RESET
+   ========================================== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-html {
+html, body {
     scroll-behavior: smooth;
     scroll-padding-top: 90px;
+    max-width: 100vw;
+    overflow-x: hidden;
 }
 
 body {
@@ -16,8 +20,17 @@ body {
     color: white;
 }
 
-/* HEADER */
+h1, h2, h3, h4, h5, h6, p {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: normal;
+    hyphens: auto;
+    max-width: 100%;
+}
 
+/* ==========================================
+   HEADER
+   ========================================== */
 .header {
     width: 100%;
     padding: 25px 4%;
@@ -30,80 +43,15 @@ body {
     z-index: 10;
 }
 
-.second-home {
-    min-height: 100vh;
-    height: auto;
-    padding: 140px 8% 70px;
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    gap: 50px;
-    flex-direction: row; 
-    background-color: white;
-    color: #333333;
-}
-
-.second-home .home-content {
-    width: 60%;
-}
-
-.second-home .home-content h1 {
-    font-size: 45px;
-    line-height: 1.15;
-    margin-bottom: 20px;
-    color: black;
-}
-
-.second-home .home-content > p {
-    font-size: 16px;
-    line-height: 1.8;
-    color: #666666;
-    margin-bottom: 30px;
-}
-
-.second-home .content-item {
-    margin-bottom: 25px;
-}
-
-.second-home .content-item h2 {
-    color: rgb(176, 63, 176); 
-    font-size: 20px;
-    margin-bottom: 8px;
-    text-transform: capitalize;
-}
-
-.second-home .content-item p {
-    font-size: 14px;
-    line-height: 1.7;
-    color: #777777;
-}
-
-.second-home .home-image {
-    width: 35%;
-    position: sticky;
-    top: 120px;
-    display: flex;
-    justify-content: center;
-}
-
-.second-home .home-image img {
-    width: 100%;
-    max-width: 320px;
-    height: 420px;
-    object-fit: cover;
-    border-radius: 15px;
-}
-
 .logo {
     font-size: 35px;
     font-weight: bold;
-    color: white;
+    color: white;  
     text-decoration: none;
 }
 
 .logo span {
     color: rgb(176, 63, 176);
-    
 }
 
 .navbar {
@@ -123,8 +71,9 @@ body {
     color: white;
 }
 
-/* HOME SECTION 1 */
-
+/* ==========================================
+   HOME SECTION 1
+   ========================================== */
 .home {
     min-height: 100vh;
     padding: 130px 8% 70px;
@@ -132,9 +81,8 @@ body {
     align-items: center;
     justify-content: space-between;
     gap: 50px;
-    background: url("https://i.pinimg.com/170x/4b/fd/7d/4bfd7d496ddbdf4151068e7cf5d06c20.jpg")  center no-repeat;
+    background: url("https://i.pinimg.com/170x/4b/fd/7d/4bfd7d496ddbdf4151068e7cf5d06c20.jpg") center no-repeat;
     background-size: cover;
-
 }
 
 .home-content {
@@ -180,7 +128,7 @@ body {
 
 .btn-outline {
     background-color: transparent;
-     color: rgb(176, 63, 176);
+    color: rgb(176, 63, 176);
 }
 
 .home-image {
@@ -198,23 +146,27 @@ body {
     height: 420px;
     object-fit: cover;
     border-radius: 15px;
+    transition: transform 0.5s ease;
+    cursor: pointer;
 }
 
-/* SECOND HOME SECTION */
+.home-image img:hover {
+    transform: scale(1.2);
+}
 
+/* ==========================================
+   SECOND HOME SECTION
+   ========================================== */
 .second-home {
-    min-height: 100vh;
+   min-height: 100vh;
     height: auto;
     padding: 140px 8% 70px;
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
     gap: 50px;
-     background: white; 
-    background-size: cover;
-    background-position: center;
-    background-color: white;
-    color:black ;
+    color:black;
+    background: white;
 }
 
 .second-home .home-content {
@@ -222,15 +174,18 @@ body {
 }
 
 .second-home .home-content h1 {
-    font-size: 45px;
+   font-size: 45px;
     line-height: 1.15;
     margin-bottom: 20px;
+    /* color: white; */
+    column-rule: #080808;
 }
 
 .second-home .home-content > p {
-    font-size: 16px;
+   font-size: 16px;
     line-height: 1.8;
-    color: #080808;
+    /* color: #eeeeee;  */
+    color: black;
     margin-bottom: 30px;
 }
 
@@ -239,21 +194,25 @@ body {
 }
 
 .second-home .content-item h2 {
-     color: rgb(176, 63, 176);
+   color: rgb(176, 63, 176);
     font-size: 20px;
     margin-bottom: 8px;
+    text-transform: capitalize;
 }
 
 .second-home .content-item p {
     font-size: 14px;
     line-height: 1.7;
-      color: #080808;
+    /* color: #cccccc; */
+    color: black;
 }
 
 .second-home .home-image {
     width: 35%;
     position: sticky;
     top: 120px;
+    display: flex;
+    justify-content: center;
     align-items: flex-start;
 }
 
@@ -263,9 +222,17 @@ body {
     height: 420px;
     object-fit: cover;
     border-radius: 15px;
+    transition: transform 0.5s ease;
+    cursor: pointer;
 }
-/* ABOUT  */
 
+.second-home .home-image img:hover {
+    transform: scale(1.2);
+}
+
+/* ==========================================
+   ABOUT SECTION
+   ========================================== */
 .about {
     width: 100%;
     min-height: 100vh;
@@ -274,7 +241,11 @@ body {
     justify-content: space-between;
     gap: 50px;
     padding: 60px 8%;
-    background-color: #080808;  
+    /* background-color: #080808;  */
+    background: url("https://i.pinimg.com/170x/4b/fd/7d/4bfd7d496ddbdf4151068e7cf5d06c20.jpg");  
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     color: white;
 }
 
@@ -289,6 +260,12 @@ body {
     height: auto;
     display: block;
     object-fit: contain;
+    transition: transform 0.5s ease;
+    cursor: pointer;
+}
+
+.about-image img:hover {
+    transform: scale(1.2);
 }
 
 .about-content {
@@ -323,6 +300,8 @@ body {
     text-decoration: none;
     font-size: 15px;
     border-radius: 5px;
+    transition: all 0.3s ease;
+    cursor: pointer;
 }
 
 .app-btn {
@@ -330,11 +309,26 @@ body {
     color: white;
 }
 
+.app-btn:hover {
+    background-color: rgb(176, 63, 176);
+    color: black;
+    transform: translateY(-5px);
+}
+
 .more-btn {
     background-color: #dddddd;
     color: #222222;
 }
 
+.more-btn:hover {
+    background-color: rgb(176, 63, 176);
+    color: black;
+    transform: translateY(-5px);
+}
+
+/* ==========================================
+   ABOUT THREE SECTION
+   ========================================== */
 .about-three {
     width: 100%;
     display: flex;
@@ -357,6 +351,12 @@ body {
     height: 450px;
     object-fit: cover;
     display: block;
+    transition: transform 0.5s ease;
+    cursor: pointer;
+}
+
+.about-three-image img:hover {
+    transform: scale(1.2);
 }
 
 .about-three-content {
@@ -390,14 +390,23 @@ body {
 .about-three-links a {
     text-decoration: none;
     padding: 12px 20px;
-    background-color:  rgb(176, 63, 176);
+    background-color: rgb(176, 63, 176);
     color: black;
     display: inline-block;
     border-radius: 5px;
+    transition: all 0.3s ease;
+    cursor: pointer;
 }
 
-/* FACTS  */
+.about-three-links a:hover {
+    background-color: #222222;
+    color: white;
+    transform: translateY(-5px);
+}
 
+/* ==========================================
+   FACTS SECTION
+   ========================================== */
 .facts {
     width: 100%;
     min-height: 450px;
@@ -455,6 +464,9 @@ body {
     font-size: 19px;
 }
 
+/* ==========================================
+   ABOUT BOTTOM & FIVE
+   ========================================== */
 .about-bottom {
     width: 100%;
     min-height: 450px;
@@ -475,7 +487,7 @@ body {
 }
 
 .about-bottom h2 span {
-     color: rgb(176, 63, 176);
+    color: rgb(176, 63, 176);
 }
 
 .about-bottom p {
@@ -542,8 +554,9 @@ body {
     border-radius: 5px;
 }
 
-/* GALLERY SECTION */
-
+/* ==========================================
+   GALLERY SECTION
+   ========================================== */
 .gallery {
     width: 100%;
     min-height: 500px;
@@ -571,7 +584,7 @@ body {
     padding: 5px;
     background-color: black;
     overflow: hidden;
-    clip-path: polygon( 25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50% );
+    clip-path: polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%);
     margin-left: -5px;
 }
 
@@ -579,16 +592,22 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    clip-path: polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%
-    );
+    clip-path: polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%);
+    transition: transform 0.5s ease;
+    cursor: pointer;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.2);
 }
 
 .second-row {
     margin-top: -10px;
 }
 
-/* CONTACT SECTION */
-
+/* ==========================================
+   CONTACT SECTION
+   ========================================== */
 .contact-section {
     width: 100%;
     min-height: 100vh;
@@ -598,11 +617,10 @@ body {
     align-items: center;
     gap: 40px;
     padding: 100px 8%;
- background: url("https://i.pinimg.com/170x/4b/fd/7d/4bfd7d496ddbdf4151068e7cf5d06c20.jpg") ;
+    background: url("https://i.pinimg.com/170x/4b/fd/7d/4bfd7d496ddbdf4151068e7cf5d06c20.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-
     color: white;
     scroll-margin-top: 20px;
 }
@@ -634,7 +652,7 @@ body {
 }
 
 .contact-info a {
-      color: rgb(176, 63, 176);
+    color: rgb(176, 63, 176);
     text-decoration: underline;
 }
 
@@ -670,11 +688,12 @@ body {
 }
 
 .contact-form button:hover {
-    background-color: rgb(176, 63, 176);;
+    background-color: rgb(176, 63, 176);
 }
 
-/* FOOTER SECTION */
-
+/* ==========================================
+   FOOTER SECTION
+   ========================================== */
 .footer {
     background: black;
     padding: 3em 0;
@@ -709,14 +728,14 @@ body {
     padding: 0.6rem 0;
     font-weight: lighter;
     text-decoration: none;
+    transition: 0.3s ease;
 }
 
-footer .box-container .box a:hover {
-    color: white; 
-    transform: translateX(10px); 
-    transition: 0.3s ease; 
+.footer .box-container .box a:hover {
+    color: white;
+    transform: translateX(10px);
     cursor: pointer;
-
+}
 
 .footer .box-container .box a i {
     padding-right: 0.8rem;
@@ -737,34 +756,10 @@ footer .box-container .box a:hover {
     color: rgb(176, 63, 176);
 }
 
-/* IMAGE ZOOM EFFECT */
-
-.home-image,
-.about-image,
-.about-three-image,
-.gallery-item {
-    overflow: hidden;
-}
-
-.home-image img,
-.about-image img,
-.about-three-image img,
-.gallery-item img {
-    transition: transform 0.5s ease;
-    cursor: pointer;
-}
-
-.home-image img:hover,
-.about-image img:hover,
-.about-three-image img:hover,
-.gallery-item img:hover {
-    transform: scale(1.2);
-}
-
-/* MEDIA QUARY */
-
+/* ==========================================
+   MEDIA QUERIES (RESPONSIVE FIXES)
+   ========================================== */
 @media (max-width: 800px) {
-
     .header {
         padding: 20px 5%;
         flex-direction: column;
@@ -786,41 +781,65 @@ footer .box-container .box a:hover {
         flex-direction: column;
         align-items: center;
         text-align: center;
-        padding: 170px 6% 60px;
-        gap: 35px;
+        padding: 160px 5% 50px;
+        gap: 30px;
+        width: 100%;
+        box-sizing: border-box;
     }
 
     .home-content,
     .second-home .home-content {
         width: 100%;
+        max-width: 100%;
+        padding: 0 15px;
+        box-sizing: border-box;
+        text-align: center;
+        margin: 0 auto;
     }
 
     .home-content h1,
     .second-home .home-content h1 {
-        font-size: 35px;
+        font-size: clamp(1.8rem, 5vw, 2.5rem);
+        word-wrap: break-word;
+    }
+
+    .home-content p,
+    .second-home .home-content > p,
+    .second-home .content-item p {
+        font-size: clamp(0.9rem, 3vw, 1rem);
+        line-height: 1.6;
+        width: 100%;
+        text-align: center;
+        overflow-wrap: break-word;
     }
 
     .buttons {
         justify-content: center;
+        width: 100%;
+        display: flex;
+        gap: 10px;
     }
 
     .home-image,
     .second-home .home-image {
         width: 100%;
         position: static;
+        display: flex;
         justify-content: center;
+        align-items: center;
+        margin-top: 15px;
     }
 
     .home-image img,
     .second-home .home-image img {
-        max-width: 280px;
-        height: 350px;
+        max-width: 260px;
+        height: auto;
     }
 
     .about,
     .about-three {
         flex-direction: column;
-        padding: 40px 6%;
+        padding: 40px 5%;
         gap: 30px;
     }
 
@@ -832,7 +851,7 @@ footer .box-container .box a:hover {
     }
 
     .about-content h2 {
-        font-size: 28px;
+        font-size: clamp(1.5rem, 4vw, 2rem);
     }
 
     .about-three-image img {
@@ -844,6 +863,7 @@ footer .box-container .box a:hover {
     .facts-box {
         gap: 35px;
         flex-wrap: wrap;
+        justify-content: center;
     }
 
     .fact-item h3 {
@@ -851,7 +871,7 @@ footer .box-container .box a:hover {
     }
 
     .about-bottom {
-        padding: 70px 6%;
+        padding: 70px 5%;
     }
 
     .about-bottom h2 {
@@ -863,18 +883,18 @@ footer .box-container .box a:hover {
     }
 
     .contact-section {
-        flex-direction: row;
+        flex-direction: column;
         align-items: center;
-        padding: 60px 4%;
-        gap: 20px;
+        padding: 60px 5%;
+        gap: 30px;
     }
 
-    .contact-info {
-        width: 45%;
+    .contact-info,
+    .contact-form {
+        width: 100%;
     }
 
     .contact-form {
-        width: 55%;
         padding: 20px;
     }
 
@@ -889,27 +909,28 @@ footer .box-container .box a:hover {
     }
 
     .gallery {
-        padding: 30px 10px;
+        padding: 30px 5%;
+        overflow: hidden;
     }
 
     .gallery-row {
         flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
     }
 
     .gallery-item {
-        width: 32%;
-        height: 140px;
-        margin: 0;
+        width: 28%;
+        height: 120px;
+        margin: 5px;
     }
 
     .second-row {
-        margin-top: 5px;
+        margin-top: 0;
     }
 }
 
-
 @media (max-width: 450px) {
-
     .header {
         padding: 18px 4%;
     }
@@ -924,6 +945,11 @@ footer .box-container .box a:hover {
 
     .navbar a {
         font-size: 12px;
+    }
+
+    .home,
+    .second-home {
+        padding-top: 130px;
     }
 
     .home-content h1,
@@ -976,19 +1002,19 @@ footer .box-container .box a:hover {
     }
 
     .contact-section {
-        flex-direction: row;
+        flex-direction: column;
         align-items: center;
-        padding: 40px 3%;
-        gap: 10px;
+        padding: 40px 4%;
+        gap: 20px;
     }
 
-    .contact-info {
-        width: 45%;
+    .contact-info,
+    .contact-form {
+        width: 100%;
     }
 
     .contact-form {
-        width: 55%;
-        padding: 12px;
+        padding: 15px;
     }
 
     .contact-info h2,
@@ -1029,39 +1055,8 @@ footer .box-container .box a:hover {
     }
 
     .gallery-item {
-        width: 48%;
-        height: 130px;
+        width: 42%;
+        height: 110px;
+        margin: 4px;
     }
-}
-
-/* ABOUT SECTION 1 BUTTON HOVER */
-
-.about-links a {
-    transition: all 0.3s ease;
-    cursor: pointer;
-}
-
-.app-btn:hover {
-    background-color: rgb(176, 63, 176);
-    color: black;
-    transform: translateY(-5px);
-}
-
-.more-btn:hover {
-    background-color: rgb(176, 63, 176);
-    color: black;
-    transform: translateY(-5px);
-}
-
-/* ABOUT SECTION 3 BUTTON HOVER */
-
-.about-three-links a {
-    transition: all 0.3s ease;
-    cursor: pointer;
-}
-
-.about-three-links a:hover {
-    background-color: #222222;
-    color: white;
-    transform: translateY(-5px);
 }
